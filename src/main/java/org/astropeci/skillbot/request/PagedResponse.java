@@ -1,6 +1,5 @@
 package org.astropeci.skillbot.request;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 

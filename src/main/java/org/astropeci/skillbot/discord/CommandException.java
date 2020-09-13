@@ -1,7 +1,6 @@
 package org.astropeci.skillbot.discord;
 
 import lombok.Getter;
-import lombok.Setter;
 
 /**
  * A generic user or otherwise expected error that occurred when processing a command.

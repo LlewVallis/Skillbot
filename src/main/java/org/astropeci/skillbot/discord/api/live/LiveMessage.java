@@ -4,8 +4,8 @@ import lombok.EqualsAndHashCode;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import net.dv8tion.jda.api.entities.MessageChannel;
-import org.astropeci.skillbot.discord.api.Message;
 import org.astropeci.skillbot.Task;
+import org.astropeci.skillbot.discord.api.Message;
 
 import java.util.concurrent.CompletableFuture;
 

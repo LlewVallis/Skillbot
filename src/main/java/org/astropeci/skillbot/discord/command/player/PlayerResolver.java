@@ -5,7 +5,6 @@ import org.astropeci.skillbot.data.player.Player;
 import org.astropeci.skillbot.data.player.PlayerRepository;
 import org.astropeci.skillbot.discord.CommandException;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;

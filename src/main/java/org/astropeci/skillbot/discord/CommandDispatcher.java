@@ -2,7 +2,8 @@ package org.astropeci.skillbot.discord;
 
 import lombok.extern.slf4j.Slf4j;
 import org.astropeci.skillbot.Task;
-import org.astropeci.skillbot.discord.api.*;
+import org.astropeci.skillbot.discord.api.CommandEvent;
+import org.astropeci.skillbot.discord.api.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationListener;
