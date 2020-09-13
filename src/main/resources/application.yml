@@ -1,0 +1,30 @@
+spring:
+  profiles:
+    active:
+      - discord
+  jpa:
+    open-in-view: false
+
+server:
+  error:
+    include-message: always
+
+discord:
+  bot:
+    status: Engaging spice
+    prefix: ;
+    confirm-timeout: 10000
+    emote:
+      processing: 🔄
+      success: ✅
+      failure: ❌
+      confirm: 🆗
+
+trueskill:
+  trueskill-deviations-from-mean: -3
+  default:
+    trueskill: 1250
+    deviation: 100
+  beta: 50
+  tau: 10
+  draw-probability: 0.05
