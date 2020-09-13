@@ -71,14 +71,14 @@ public class PlayerResolver {
         }
 
         if (matches.size() == 0) {
-            throw new CommandException("no players exist with '%s' in their name".formatted(specifier));
+            throw new CommandException(String.format("no players exist with '%s' in their name", specifier));
         }
 
         if (matches.size() > 1) {
-            StringBuilder errorMessage = new StringBuilder("'%s' matched multiple players:\n".formatted(specifier));
+            StringBuilder errorMessage = new StringBuilder(String.format("'%s' matched multiple players:\n", specifier));
 
             for (Player player : matches) {
-                errorMessage.append("* %s\n".formatted(player));
+                errorMessage.append(String.format("* %s\n", player));
             }
 
             throw new CommandException(errorMessage.toString());

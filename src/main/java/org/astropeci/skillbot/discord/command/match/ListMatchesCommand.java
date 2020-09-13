@@ -51,7 +51,7 @@ public class ListMatchesCommand implements Command {
         } else if (matches.getElements().size() == 0) {
             throw new CommandException("No matches on this page").setFormattedAsError(false);
         } else {
-            String topLine = "Showing %s-%s of %s matches (page %s of %s)".formatted(
+            String topLine = String.format("Showing %s-%s of %s matches (page %s of %s)",
                     matches.getStartingCount() + 1,
                     matches.getEndingCount(),
                     matches.getTotalElements(),
@@ -63,7 +63,7 @@ public class ListMatchesCommand implements Command {
             response.append("```\n");
 
             for (Match match : matches.getElements()) {
-                response.append("* %s\n".formatted(match));
+                response.append(String.format("* %s\n", match));
             }
 
             response.append("```");

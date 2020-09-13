@@ -56,7 +56,7 @@ public class DeletePlayerCommand implements Command {
 
         Player player = playerResolver.resolve(arguments.get(0), playerRepository);
 
-        String prompt = "Are you sure you want to delete %s?".formatted(player);
+        String prompt = String.format("Are you sure you want to delete %s?", player);
         boolean confirmed = confirmationFlow.askForConfirmation(message, prompt).waitFor();
 
         if (confirmed) {

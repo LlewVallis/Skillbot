@@ -96,7 +96,7 @@ public class ProcessMatchRequest {
         matchParticipantRepository.saveAll(finishedParticipants);
         match.getParticipants().addAll(finishedParticipants);
 
-        log.info("Calculated match between %s and %s. Outcome was %s".formatted(
+        log.info(String.format("Calculated match between %s and %s. Outcome was %s",
                 teamA.stream().map(Object::toString).collect(Collectors.joining(", ")),
                 teamB.stream().map(Object::toString).collect(Collectors.joining(", ")),
                 outcome

@@ -55,7 +55,7 @@ class HelpCommand implements Command {
         StringBuilder response = new StringBuilder("```\n");
 
         for (Command command : relevantCommands) {
-            String line = "* %s\n%s\n\n".formatted(command.usage(), command.helpDescription());
+            String line = String.format("* %s\n%s\n\n", command.usage(), command.helpDescription());
             response.append(line);
         }
 

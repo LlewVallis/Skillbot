@@ -16,7 +16,7 @@ public class RevertTooLargeException extends MatchException {
     private final int maximum;
 
     public RevertTooLargeException(int maximum) {
-        super(DEFAULT_MESSAGE.formatted(maximum));
+        super(String.format(DEFAULT_MESSAGE, maximum));
         this.maximum = maximum;
     }
 
@@ -31,7 +31,7 @@ public class RevertTooLargeException extends MatchException {
     }
 
     public RevertTooLargeException(int maximum, Throwable cause) {
-        super(DEFAULT_MESSAGE.formatted(maximum), cause);
+        super(String.format(DEFAULT_MESSAGE, maximum), cause);
         this.maximum = maximum;
     }
 }

@@ -14,7 +14,7 @@ public class DuplicatePlayerException extends MatchException {
     private final Player player;
 
     public DuplicatePlayerException(Player player) {
-        super(DEFAULT_MESSAGE.formatted(player));
+        super(String.format(DEFAULT_MESSAGE, player));
         this.player = player;
     }
 
@@ -29,7 +29,7 @@ public class DuplicatePlayerException extends MatchException {
     }
 
     public DuplicatePlayerException(Player player, Throwable cause) {
-        super(DEFAULT_MESSAGE.formatted(player), cause);
+        super(String.format(DEFAULT_MESSAGE, player), cause);
         this.player = player;
     }
 }

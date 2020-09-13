@@ -39,7 +39,7 @@ public class Skill implements Cloneable {
 
     @Override
     public String toString() {
-        return "%.1f/%.1f".formatted(trueskill, deviation);
+        return String.format("%.1f/%.1f", trueskill, deviation);
     }
 
     @Override

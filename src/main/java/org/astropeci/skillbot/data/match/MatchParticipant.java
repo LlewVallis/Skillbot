@@ -75,6 +75,6 @@ public class MatchParticipant {
 
     @Override
     public String toString() {
-        return "%s %s -> %s (%s)".formatted(player.getDisplayName(), skillBefore, skillAfter, player.getDiscordId());
+        return String.format("%s %s -> %s (%s)", player.getDisplayName(), skillBefore, skillAfter, player.getDiscordId());
     }
 }

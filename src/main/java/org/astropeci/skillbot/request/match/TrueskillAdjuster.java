@@ -65,7 +65,7 @@ public class TrueskillAdjuster {
                     placings
             );
         } catch (Exception e) {
-            log.error("Error computing result %s between %s and %s".formatted(
+            log.error(String.format("Error computing result %s between %s and %s",
                     outcome, teamToString(teamA), teamToString(teamB)
             ), e);
 

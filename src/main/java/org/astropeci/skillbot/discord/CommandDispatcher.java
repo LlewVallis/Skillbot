@@ -148,7 +148,7 @@ public class CommandDispatcher implements ApplicationListener<CommandEvent> {
             log.warn("Failing command '{}' due to expected error", message);
 
             if (e.isFormattedAsError()) {
-                response = "Error:\n```\n%s\n```".formatted(e.getMessage());
+                response = String.format("Error:\n```\n%s\n```", e.getMessage());
             } else {
                 response = e.getMessage();
             }
@@ -157,7 +157,7 @@ public class CommandDispatcher implements ApplicationListener<CommandEvent> {
             response = failedConstraintMessage(e);
         } catch (Exception e) {
             log.error("Internal error whilst executing command '{}'", message, e);
-            response = "Unexpected internal error:\n```\n%s\n```".formatted(simplifiedStacktrace(e));
+            response = String.format("Unexpected internal error:\n```\n%s\n```", simplifiedStacktrace(e));
         }
 
         // Clip responses due to discord limitations. We can technically go to 2000 but we'll clip early for safety
@@ -206,7 +206,7 @@ public class CommandDispatcher implements ApplicationListener<CommandEvent> {
                         .ifPresent(elem -> location.set(elem.toString()));
             }
 
-            String line = "%s: %s\n    at %s\n".formatted(e.getClass().getName(), e.getMessage(), location.get());
+            String line = String.format("%s: %s\n    at %s\n", e.getClass().getName(), e.getMessage(), location.get());
 
             writer.write(line);
             e = e.getCause();

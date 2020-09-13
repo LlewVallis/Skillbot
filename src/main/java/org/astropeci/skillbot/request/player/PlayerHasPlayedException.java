@@ -14,7 +14,7 @@ public class PlayerHasPlayedException extends PlayerException {
     private final Player player;
 
     public PlayerHasPlayedException(Player player) {
-        super(DEFAULT_MESSAGE.formatted(player));
+        super(String.format(DEFAULT_MESSAGE, player));
         this.player = player;
     }
 
@@ -29,7 +29,7 @@ public class PlayerHasPlayedException extends PlayerException {
     }
 
     public PlayerHasPlayedException(Player player, Throwable cause) {
-        super(DEFAULT_MESSAGE.formatted(player), cause);
+        super(String.format(DEFAULT_MESSAGE, player), cause);
         this.player = player;
     }
 }

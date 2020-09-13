@@ -46,7 +46,7 @@ public class ConfirmationFlow implements ApplicationListener<ReactionEvent> {
     }
 
     private String createFullPrompt(String prompt) {
-        return "%s\nReact with %s to confirm".formatted(prompt, confirmEmote);
+        return String.format("%s\nReact with %s to confirm", prompt, confirmEmote);
     }
 
     private void addAwaitingMessage(Message message, CompletableFuture<Boolean> future) {

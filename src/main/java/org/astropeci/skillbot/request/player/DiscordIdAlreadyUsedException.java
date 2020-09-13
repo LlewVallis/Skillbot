@@ -13,7 +13,7 @@ public class DiscordIdAlreadyUsedException extends PlayerException {
     private final String discordId;
 
     public DiscordIdAlreadyUsedException(String discordId) {
-        super(DEFAULT_MESSAGE.formatted(discordId));
+        super(String.format(DEFAULT_MESSAGE, discordId));
         this.discordId = discordId;
     }
 
@@ -28,7 +28,7 @@ public class DiscordIdAlreadyUsedException extends PlayerException {
     }
 
     public DiscordIdAlreadyUsedException(String discordId, Throwable cause) {
-        super(DEFAULT_MESSAGE.formatted(discordId), cause);
+        super(String.format(DEFAULT_MESSAGE, discordId), cause);
         this.discordId = discordId;
     }
 }

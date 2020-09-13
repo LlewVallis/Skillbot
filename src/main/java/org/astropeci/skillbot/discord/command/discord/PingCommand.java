@@ -42,6 +42,6 @@ public class PingCommand implements Command {
         }
 
         long ping = request.run();
-        return "Ping to gateway is %sms".formatted(ping);
+        return String.format("Ping to gateway is %sms", ping);
     }
 }

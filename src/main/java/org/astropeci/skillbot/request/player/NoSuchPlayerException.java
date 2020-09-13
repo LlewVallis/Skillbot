@@ -13,7 +13,7 @@ public class NoSuchPlayerException extends PlayerException {
     private final long id;
 
     public NoSuchPlayerException(long id) {
-        super(DEFAULT_MESSAGE.formatted(id));
+        super(String.format(DEFAULT_MESSAGE, id));
         this.id = id;
     }
 
@@ -28,7 +28,7 @@ public class NoSuchPlayerException extends PlayerException {
     }
 
     public NoSuchPlayerException(long id, Throwable cause) {
-        super(DEFAULT_MESSAGE.formatted(id), cause);
+        super(String.format(DEFAULT_MESSAGE, id), cause);
         this.id = id;
     }
 }

@@ -76,14 +76,14 @@ public abstract class ProcessMatchCommandBase implements Command {
         Set<MatchParticipant> teamA = match.getTeamA();
         Set<MatchParticipant> teamB = match.getTeamB();
 
-        String header = "Calculated %s".formatted(match);
+        String header = String.format("Calculated %s", match);
 
         StringBuilder builder = new StringBuilder(header);
         builder.append("```\n");
 
         List<MatchParticipant> bothTeams = Stream.concat(teamA.stream(), teamB.stream()).collect(Collectors.toList());
         for (MatchParticipant participant : bothTeams) {
-            builder.append("* %s\n".formatted(participant));
+            builder.append(String.format("* %s\n", participant));
         }
 
         builder.append("```");

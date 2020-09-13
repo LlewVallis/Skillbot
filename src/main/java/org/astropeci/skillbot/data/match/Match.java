@@ -88,6 +88,6 @@ public class Match {
         String teamB = getTeamString(getTeamB());
         String outcome = getOutcome() == MatchOutcome.TEAM_A_WINS ? "wins against" : "ties with";
 
-        return "%s %s %s (%s)".formatted(teamA, outcome, teamB, id);
+        return String.format("%s %s %s (%s)", teamA, outcome, teamB, id);
     }
 }

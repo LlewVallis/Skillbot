@@ -87,6 +87,6 @@ public class Player {
 
     @Override
     public String toString() {
-        return "%s %s (%s)".formatted(displayName, skill, discordId);
+        return String.format("%s %s (%s)", displayName, skill, discordId);
     }
 }

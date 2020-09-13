@@ -53,19 +53,19 @@ public class RevertMatchesCommand implements Command {
         try {
             matches = request.run(count);
         } catch (InsufficientHistoryException e) {
-            String errorMessage = "There are only %s matches to undo".formatted(e.getHistorySize());
+            String errorMessage = String.format("There are only %s matches to undo", e.getHistorySize());
             throw new CommandException(errorMessage, e).setFormattedAsError(false);
         } catch (RevertTooLargeException e) {
             throw new CommandException(e.getMessage(), e);
         }
 
-        String header = "Reverted %s matches".formatted(matches.size());
+        String header = String.format("Reverted %s matches", matches.size());
 
         StringBuilder response = new StringBuilder(header);
         response.append("```\n");
 
         for (Match match : matches) {
-            response.append("* %s\n".formatted(match));
+            response.append(String.format("* %s\n", match));
         }
 
         response.append("```");

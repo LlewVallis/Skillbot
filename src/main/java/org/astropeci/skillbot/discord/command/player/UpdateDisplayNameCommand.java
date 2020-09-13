@@ -55,6 +55,6 @@ public class UpdateDisplayNameCommand implements Command {
 
         player = request.run(player);
 
-        return "Renamed %s to %s".formatted(oldName, player.getDisplayName());
+        return String.format("Renamed %s to %s", oldName, player.getDisplayName());
     }
 }

@@ -81,7 +81,7 @@ public class ListPlayersCommand implements Command {
         } else if (players.getElements().size() == 0) {
             throw new CommandException("No players on this page").setFormattedAsError(false);
         } else {
-            String topLine = "Showing %s-%s of %s players (page %s of %s)".formatted(
+            String topLine = String.format("Showing %s-%s of %s players (page %s of %s)",
                     players.getStartingCount() + 1,
                     players.getEndingCount(),
                     players.getTotalElements(),
@@ -93,7 +93,7 @@ public class ListPlayersCommand implements Command {
             response.append("```\n");
 
             for (Player player : players.getElements()) {
-                response.append("* %s\n".formatted(player));
+                response.append(String.format("* %s\n", player));
             }
 
             response.append("```");
