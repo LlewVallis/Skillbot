@@ -37,7 +37,6 @@ public class LiveEventListener extends ListenerAdapter {
         }
 
         if (!event.getChannel().getName().equals("skillbot")) {
-            log.info("Ignoring bot command in channel " + event.getChannel().getName());
             return;
         }
 
